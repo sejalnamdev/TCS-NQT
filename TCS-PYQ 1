@@ -1,8 +1,12 @@
 v = int(input("enter vehicle no."))
 w = int(input("enter total no. of wheels"))
 
-tw = int((4*v - w) / 2)
-fw = int((w - 2*v) / 2)
+if w % 2 != 0 or w < 2*v or w > 4*v:
+    print("invalid input")
+else:
+    tw = int((4*v - w) / 2)
+    fw = int((w - 2*v) / 2)
 
-print("total no. of two wheeler is", tw)
-print("total no. of four wheeler is", fw)
+    print("total no. of two wheeler is", tw)
+    print("total no. of four wheeler is", fw)
+
